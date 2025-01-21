@@ -1,1 +1,1 @@
-db.getCollectionNames()
+db.empleados.find({},{"_id":false})
