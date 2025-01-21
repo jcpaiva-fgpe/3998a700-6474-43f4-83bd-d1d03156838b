@@ -1,0 +1,20 @@
+[
+  {
+    _id: '664e0656205d7eee44deb171',
+    pelicula_id: 211,
+    titulo: 'Darling Breaking',
+    categoria: 'Games',
+    precio: 4.99,
+    duracion: 165,
+    clasificacion: 'PG-13'
+  },
+  {
+    _id: '664e0656205d7eee44deb185',
+    pelicula_id: 956,
+    titulo: 'Wanda Chamber',
+    categoria: 'Games',
+    precio: 4.99,
+    duracion: 107,
+    clasificacion: 'PG-13'
+  }
+]
