@@ -1,0 +1,1 @@
+db.empleados.find({interesting_fact: { $exists: true }}, {"_id": false}).sort({"name": 1})
