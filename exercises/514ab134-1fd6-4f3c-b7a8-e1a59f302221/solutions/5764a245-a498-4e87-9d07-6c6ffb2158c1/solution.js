@@ -1,0 +1,1 @@
+db.peliculas.find({"categoria": "Games", "clasificacion": "PG-13"});
