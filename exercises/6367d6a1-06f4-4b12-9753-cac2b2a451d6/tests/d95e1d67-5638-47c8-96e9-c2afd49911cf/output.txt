@@ -1,1 +1,31 @@
-[ 'empleados' ]
+{
+  empno: 4,
+  fname: 'ben',
+  lname: 'bradley',
+  role: 'manager',
+  departments: [
+    'legal'
+  ]
+}
+{
+  empno: 2,
+  fname: 'sunil',
+  lname: 'chakraborty',
+  role: 'team lead',
+  departments: [
+    'marketing',
+    'finance'
+  ]
+}
+{
+  empno: 5,
+  fname: 'radha',
+  lname: 'desai',
+  role: 'worker'
+}
+{
+  empno: 7,
+  fname: 'mahesh',
+  lname: 'iyer',
+  role: 'manager'
+}
