@@ -1,13 +1,71 @@
-<h2>Colecciones</h2>
-<p class="leafygreen-ui-1kp3ins">MongoDB almacena <em>documentos</em> en <em>Colecciones</em>.</p>
-<p>Las <em>Colecciones</em> son anáálogas a las <em>tablas</em> en el modelo relacional.</p>
-<div class="css-1yvtw5i ej97su30"><img alt="A collection of MongoDB documents." style="--border-color: #C1C7C6;" width="600" height="300" src="https://www.mongodb.com/docs/manual/images/crud-annotated-collection.bakedsvg.svg" class="leafygreen-ui-1qnf57e">
-</p>
-<h3>Crear una colección explícitamente</h3>
-<p>Aunque MongoDB puede crear una colección cuando se inserta el primer documento en la misma, también nos permite crear explícitamente una colección con el comando:</p>
-<pre><code>db.createCollection(name, options)</code></pre>
+<h2>Insertar varios documentos en una instrucción</h2>
+<p>Evidentemente, si necesitamos insertar varios documentos en una colección, podríamos ejecutar varias sentencias <code>db.collection.insertOne()</code></p>
+<p>No obstante, una mejor solución es insertar todos los documentos en una sola instrucción:</p>
+<pre><code>db.collection.insertMany(&lt;array de documentos&gt;)</code></pre>
 <h3>Ejemplo</h3>
-</p>Para crear la colección prueba, podemos ejecutar la siguiente orden:</p>
-<pre><code>db.createCollection("prueba")</code></pre>
+</p>Para insertar los datos de varias ventas en la colección de <code>ventas</code>, podríamos ejecutar la siguiente orden:</p>
+<pre><code>db.ventas.insertMany(
+    [
+        {
+            "fecha_venta": "2025-01-01",
+            "cliente": "Noa Smith",
+            "precio_total": 200
+        },
+        {
+            "fecha_venta": "2025-01-02",
+            "cliente": "Adam Gustavson",
+            "precio_total": 350,
+            "descuento": 0.1
+        },
+})</code></pre>
+<p>Podemos observar que la estructura de los documentos es menos rígida que las de las tuplas, ya que cada <em>documento</em> podrá incluir campos distintos al del resto de los registros</p>
 <h3>Ejercicio</h3>
-<p>Crea una colección llamada <strong><code>empleados</code></strong></p>
+<p>Inserta, en la colección llamada <strong><code>empleados</code></strong>, los siguientes documentos</p>
+<pre><code>
+{
+  "empno": 1,
+  "fname": "charlie",
+  "lname": "rodgers",
+  "role": "manager",
+  "departments": ["sales", "marketing"]
+},
+{
+  "empno": 2,
+  "fname": "sunil",
+  "lname": "chakraborty",
+  "role": "team lead",
+  "departments": ["marketing", "finance"]
+},
+{
+  "empno": 3,
+  "fname": "sally",
+  "lname": "jones",
+  "role": "team lead",
+  "departments": ["hr", "admin"]
+},
+{
+  "empno": 4,
+  "fname": "ben",
+  "lname": "bradley",
+  "role": "manager",
+  "departments": ["legal"]
+},
+{
+  "empno": 5,
+  "fname": "radha",
+  "lname": "desai",
+  "role": "worker"
+},
+{
+  "empno": 6,
+  "fname": "shruti",
+  "lname": "patel",
+  "role": "worker"
+},
+{
+  "empno": 7,
+  "fname": "mahesh",
+  "lname": "iyer",
+  "role": "manager"
+}
+</code></pre>
