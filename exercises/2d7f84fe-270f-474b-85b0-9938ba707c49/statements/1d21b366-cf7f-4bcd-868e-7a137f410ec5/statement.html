@@ -1,13 +1,46 @@
-<h2>Colecciones</h2>
-<p class="leafygreen-ui-1kp3ins">MongoDB almacena <em>documentos</em> en <em>Colecciones</em>.</p>
-<p>Las <em>Colecciones</em> son anáálogas a las <em>tablas</em> en el modelo relacional.</p>
-<div class="css-1yvtw5i ej97su30"><img alt="A collection of MongoDB documents." style="--border-color: #C1C7C6;" width="600" height="300" src="https://www.mongodb.com/docs/manual/images/crud-annotated-collection.bakedsvg.svg" class="leafygreen-ui-1qnf57e">
-</p>
-<h3>Crear una colección explícitamente</h3>
-<p>Aunque MongoDB puede crear una colección cuando se inserta el primer documento en la misma, también nos permite crear explícitamente una colección con el comando:</p>
-<pre><code>db.createCollection(name, options)</code></pre>
+<h2>Insertar documentos</h2>
+<p>Estamos acostumbrados a ver datos en formato tabular, debido a la estructura de la base de datos relacional. Por ello, comenzaremos con los datos en formato tabular, como se ve a continuación, y luego los convertiremos en un
+                                objeto <strong>JSON</strong>&nbsp;para que se pueda insertar en nuestra colección.</p>
+                            <table class="tabla" style="margin-left: auto;margin-right: auto; border:1px solid black">
+                                <thead>
+                                    <tr>
+                                        <th>fname</th>
+                                        <th>lname</th>
+                                        <th>salary</th>
+                                        <th>departments</th>
+                                        <th>hiredate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>70000</td>
+                                        <td>sales, admin</td>
+                                        <td>2018-08-29</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p dir="auto" style="text-align: left;">Convirtiendo esta tabla en un objeto, un conjunto de&nbsp;pares&nbsp;<code>campo:valor</code>&nbsp;rodeado por&nbsp;<code>{}</code>se ve así:</p>
+                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto">
+<pre>    {
+	    "fname": "John",
+        "lname": "Doe",
+        "salary": 70000,
+        "departments": ["sales", "admin"],
+        "hiredate": "2018-08-29"
+    }</pre>
+                            </div>
+                            <p dir="auto">Ahora que tenemos nuestro objeto JSON, insértelo en nuestra colección.</p>
+<h3>Insertar un documento</h3>
+<p>El comando para insertar un documento en una colección es el siguiente:</p>
+<pre><code>db.collection.insertOne(<document>)</code></pre>
 <h3>Ejemplo</h3>
-</p>Para crear la colección prueba, podemos ejecutar la siguiente orden:</p>
-<pre><code>db.createCollection("prueba")</code></pre>
+</p>Para insertar los datos de una venta en la colección de <code>ventas</code>, podríamos ejecutar la siguiente orden:</p>
+<pre><code>db.ventas.insertOne({
+    "fecha_venta": "2025-01-01",
+    "cliente": "Noa Smith",
+    "precio_total": 200
+})</code></pre>
 <h3>Ejercicio</h3>
-<p>Crea una colección llamada <strong><code>empleados</code></strong></p>
+<p>Inserta un documento con los datos del empleado John Doe anterior en la colección llamada <strong><code>empleados</code></strong></p>
