@@ -1,4 +1,4 @@
-db.empleados.insertMany([
+db.empleados.insertMany([	 	 	
 {
 	name: "Harry Potter",
 	title: "Wizard",
