@@ -1,0 +1,11 @@
+<h2>Filtrando por máás de un campo</h2>
+<p>Agregar otro parámetro usando el operador <code>,</code> significa utilizar un <code>AND</code> con los filtros y devuelve los documentos que contienen ambos valores en los respectivos campos.<p>
+
+<pre><code>db.&lt;collection&gt;.countDocuments(&lt;campo1&gt;: &lt;valor1&gt;&lt;campo2&gt;: &lt;valor2&gt;)</code></pre>
+<h3>Ejemplo</h3>
+</p>Hay varios <code>type1</code> en las cartas de Pokémon. Puedes echar un vistazo ejecutando la consulta <code>distinct()</code>
+ en este campo. Uno de esos <code>type1</code> es <code>'rock'</code>. Averigüemos cuántas tarjetas <code>'rock'</code> tienen un valor <code>hp</code> de <code>123</code>.</p>
+<pre><code>db.cards.countDocuments({"hp":123, "type1":"rock"})
+</code></pre>
+<h3>Ejercicio</h3>
+<p>Cuenta los documentos existentes en la colección <strong><code>movies_2015</code></strong> que tienen un <code>rated</code> de <code>TV-14</code> y un <code>type</code> igual a <code>series</code></p>
