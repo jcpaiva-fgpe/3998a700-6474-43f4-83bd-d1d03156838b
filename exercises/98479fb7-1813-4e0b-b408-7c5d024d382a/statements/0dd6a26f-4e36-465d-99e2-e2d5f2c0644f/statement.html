@@ -14,6 +14,7 @@ db.cards.find(
     {"hp":123, "type1":"rock", "abilities": "Refrigerate"}, 
     {"name":1})
 </code></pre>
+<p><strong>Nota:</strong> Si queremos que no se muestre el campo <code>_id</code>, debemos añadir a la proyección <code>"_id": 0</code></p>
 <h3>Ejercicio</h3>
 <p>Muestra el título (<code>title</code>) y el reparto (<code>cast</code>) de las películas de la colección <strong><code>movies_2015</code></strong>
  que tienen un <code>rated</code> de <code>TV-14</code> y un <code>type</code> igual a <code>series</code></p>
