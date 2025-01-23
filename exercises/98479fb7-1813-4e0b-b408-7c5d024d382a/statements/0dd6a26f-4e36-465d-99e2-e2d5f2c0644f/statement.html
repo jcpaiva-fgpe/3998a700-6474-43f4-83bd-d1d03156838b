@@ -1,12 +1,19 @@
-<h2>Usando el método find()</h2>
-<p>Para mostrar un documento completo, utilice el método <code>find()</code>. Cuando se utiliza <code>find()</code> sin parámetros adicionales,
- se devolverán todos los documentos de la base de datos.</p>
-<p>Por lo general, querrá agregar parámetros a <code>find()</code> para filtrar sus resultados. Recuerda que <code>,</code> es un operador <code>AND</code>.<p>
-
-<pre><code>db.&lt;collection&gt;.find({&lt;campo1&gt;: &lt;valor1&gt;&lt;campo2&gt;: &lt;valor2&gt;})</code></pre>
+<h2>Proyecciones</h2>
+<p>De forma predeterminada, MongoDB devuelve todos los campos para todos los documentos coincidentes, como se ve en todos los resultados anteriores.</p>
+<p>Las proyecciones reducen la sobrecarga de la red y los requisitos de procesamiento al limitar los campos que se devuelven en los documentos de resultados.</p>
+<p>Las proyecciones se pasan como el segundo argumento del método <code>find()</code>.</p>
+<p dir="auto">Debemos usar <code>&lt;campo&gt;: 1</code> para incluir ese campo en el documento de resultados y/o usar <code>&lt;campo&gt;: 0</code> para excluir ese campo.
+ Debemos tener en cuenta que los <strong>valores</strong> <code>1</code> y <code>0</code> o <code>true</code> y <code>false</code> representan <strong>la inclusión</strong>
+  y <strong>la exclusión</strong> en el documento resultante, respectivamente.</p>
+<pre><code>db.&lt;collection&gt;.find({&lt;campo1&gt;: &lt;valor1&gt;&lt;campo2&gt;: &lt;valor2&gt;}, {<code>&lt;campo1&gt;: [1|0]</code>, <code>&lt;campo2&gt;: [1|0]</code>})</code></pre>
 <h3>Ejemplo</h3>
-</p>Como en el ejemplo del ejercicio anterior, ¿qué tarjetas de <code>type</code> <code>'rock'</code> tienen un valor para <code>hp</code> de <code>123</code>.</p>
-<pre><code>db.cards.find({"hp":123, "type1":"rock"})
+</p>Como en el ejemplo del ejercicio anterior, muestra el <code>name</code> de las tarjetas de <code>type</code> <code>'rock'</code>
+ tienen un valor para <code>hp</code> de <code>123</code> y el de <code>abilities</code> de <code>Refrigerate</code>.</p>
+<pre><code>
+db.cards.find(
+    {"hp":123, "type1":"rock", "abilities": "Refrigerate"}, 
+    {"name":1})
 </code></pre>
 <h3>Ejercicio</h3>
-<p>Muestra los documentos existentes en la colección <strong><code>movies_2015</code></strong> que tienen un <code>rated</code> de <code>TV-14</code> y un <code>type</code> igual a <code>series</code></p>
+<p>Muestra el título (<code>title</code>) y el reparto (<code>cast</code>) de las películas de la colección <strong><code>movies_2015</code></strong>
+ que tienen un <code>rated</code> de <code>TV-14</code> y un <code>type</code> igual a <code>series</code></p>
