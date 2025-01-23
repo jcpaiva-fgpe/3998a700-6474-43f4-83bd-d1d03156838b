@@ -1,46 +1,14 @@
-<h2>Insertar documentos</h2>
-<p>Estamos acostumbrados a ver datos en formato tabular, debido a la estructura de la base de datos relacional. Por ello, comenzaremos con los datos en formato tabular, como se ve a continuación, y luego los convertiremos en un
-                                objeto <strong>JSON</strong>&nbsp;para que se pueda insertar en nuestra colección.</p>
-                            <table class="tabla" style="margin-left: auto;margin-right: auto; border:1px solid black" cellspacing="3px">
-                                <thead>
-                                    <tr>
-                                        <th style="border:1px solid black">fname</th>
-                                        <th style="border:1px solid black">lname</th>
-                                        <th style="border:1px solid black">salary</th>
-                                        <th style="border:1px solid black">departments</th>
-                                        <th style="border:1px solid black">hiredate</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="border:1px solid black">John</td>
-                                        <td style="border:1px solid black">Doe</td>
-                                        <td style="border:1px solid black">70000</td>
-                                        <td style="border:1px solid black">sales, admin</td>
-                                        <td style="border:1px solid black">2018-08-29</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p dir="auto" style="text-align: left;">Convirtiendo esta tabla en un objeto, un conjunto de&nbsp;pares&nbsp;<code>campo:valor</code>&nbsp;rodeado por&nbsp;<code>{}</code>se ve así:</p>
-                            <div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto">
-<pre>    {
-	    "fname": "John",
-        "lname": "Doe",
-        "salary": 70000,
-        "departments": ["sales", "admin"],
-        "hiredate": "2018-08-29"
-    }</pre>
-                            </div>
-                            <p dir="auto">Ahora que tenemos nuestro objeto JSON, insértelo en nuestra colección.</p>
-<h3>Insertar un documento</h3>
-<p>El comando para insertar un documento en una colección es el siguiente:</p>
-<pre><code>db.collection.insertOne(<document>)</code></pre>
+<h2>Acciones previas</h2>
+<p>Para la realización de los siguientes ejercicios, se ha creado una versión reducida de la collección <code>movies</code> que tenéis disponible en la base de datos de <code>sample_mflix</code>.
+En la máquina virtual, podéis ejecutar <em>MongoDB Compass</em> y conectaros a <code>localhost</code> para acceder a ésta y al resto de bases de datos instaladas.</p>
+<p>En el caso de que la colección <code>movies_2015</code> no aparezca dentro de <code>sample-mflix</code> podéis crear una nueva colección <code>movies_2015</code> e
+importar el fichero <code>json</code>, que puedes encontrar en el curso.<p>
+<p>Para importar el fichero, selecciona la nueva colección desde MongoDB Compass y haz click en el botón <code>Add Data</code> -> <code>Import JSON or CSV File</code><p>
+<h3>Contar documentos</h3>
+<p>El comando para contar los documentos almacenados en una colección es el siguiente:</p>
+<pre><code>db.&lt;collection&gt;.countDocuments(&lt;document&gt;)</code></pre>
 <h3>Ejemplo</h3>
-</p>Para insertar los datos de una venta en la colección de <code>ventas</code>, podríamos ejecutar la siguiente orden:</p>
-<pre><code>db.ventas.insertOne({
-    "fecha_venta": "2025-01-01",
-    "cliente": "Noa Smith",
-    "precio_total": 200
-})</code></pre>
+</p>Para contar los documentos almacenados en la colección de <code>ventas</code>, podríamos ejecutar la siguiente orden:</p>
+<pre><code>db.ventas.countDocuments()</code></pre>
 <h3>Ejercicio</h3>
-<p>Inserta un documento con los datos del empleado John Doe anterior en la colección llamada <strong><code>empleados</code></strong></p>
+<p>Cuenta los documentos existentes en la colección <strong><code>movies_2015</code></strong></p>
