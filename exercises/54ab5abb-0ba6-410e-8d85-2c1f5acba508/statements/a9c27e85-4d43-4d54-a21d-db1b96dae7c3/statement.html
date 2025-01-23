@@ -2,8 +2,10 @@
 <p>Para obtener un recuento de valores únicos en un campo determinado, reemplace<code>countDocuments()</code> por <code>distinct()</code>, añadiendo un nombre de campo como primer argumento:</p>
 <pre><code>db.&lt;collection&gt;.distinct(&lt;campo&gt;)</code></pre>
 <h3>Ejemplo</h3>
-<p></p>Para mostrar los valores diferentes del campo <code>fecha</code> en la colección de <code>ventas</code>, podríamos ejecutar la siguiente orden:
+<p></p>Para mostrar los valores diferentes del campo <code>hp</code> en la colección de <code>cards</code> de la base de datos <code>pokemon</code>, podríamos ejecutar la siguiente orden:
 <p></p>
-<pre><code>db.ventas.distinct("fecha")</code></pre>
+<pre><code>use pokemon
+db.cards.distinct("hp")</code></pre>
+<p><small>A partir de ahora, no añadiremos el comando para cambiar de base de datos <code>use &lt;base de datos&gt;</code></small></p>
 <h3>Ejercicio</h3>
 <p>Muestra los valores diferentes del campo <code>rated</code> de la colección <code>movies_2015</code></p>
