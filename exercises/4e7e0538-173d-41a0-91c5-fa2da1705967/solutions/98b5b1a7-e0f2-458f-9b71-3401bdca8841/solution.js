@@ -1,1 +1,1 @@
-db.movies_2015.countDocuments({"rated": "TV-14", "type": "series"})
+db.movies_2015.find({"rated": "TV-14", "type": "series"})
