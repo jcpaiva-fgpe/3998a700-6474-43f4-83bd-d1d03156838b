@@ -1,0 +1,1 @@
+db.empleados.find({},{"_id":false})
