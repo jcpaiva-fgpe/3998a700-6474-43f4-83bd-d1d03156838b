@@ -1,1 +1,22 @@
-1
+{
+  "_id": {
+    "$oid": "6792287e26c2bcbdbc8d331f"
+  },
+  "genres": [
+    "Documentary"
+  ],
+  "cast": [
+    "Robert Durst",
+    "Andrew Jarecki",
+    "Gary Napoli",
+    "Debra Kay Anderson"
+  ],
+  "title": "The Jinx: The Life and Deaths of Robert Durst",
+  "rated": "TV-14",
+  "year": 2015,
+  "countries": [
+    "USA"
+  ],
+  "type": "series",
+  "id": "573a13f6f29313caabde56e0"
+}
