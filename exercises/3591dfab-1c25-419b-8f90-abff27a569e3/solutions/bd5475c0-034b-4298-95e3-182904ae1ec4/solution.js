@@ -1,4 +1,14 @@
 db.advanced_books.find(
-    {"reviews": {$exists: true}},
-    {"_id": 0, "title": 1, "price": 1}
-).sort({"price": -1})
+    {
+        $or: [
+            {"stats.pages": {$gt: 1000}},
+            {"price": {$gt: 30}}
+        ]
+    },
+    {
+        "_id": 0,
+        "title": 1,
+        "stats.pages": 1,
+        "price": 1
+    }
+).sort({"stats.pages": -1})
