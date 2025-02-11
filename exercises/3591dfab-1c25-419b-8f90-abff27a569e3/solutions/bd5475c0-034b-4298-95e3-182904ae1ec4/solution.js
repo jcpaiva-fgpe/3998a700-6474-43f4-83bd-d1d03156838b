@@ -1,14 +1,8 @@
-db.advanced_books.find(
-    {
-        $or: [
-            {"stats.pages": {$gt: 1000}},
-            {"price": {$gt: 30}}
-        ]
-    },
-    {
-        "_id": 0,
-        "title": 1,
-        "stats.pages": 1,
-        "price": 1
-    }
-).sort({"stats.pages": -1})
+[
+  { "title": "War and Peace", "stats": { "pages": 1225 }, "price": 34.99 },
+  {
+    "title": "The Lord of the Rings",
+    "stats": { "pages": 1178 },
+    "price": 39.99
+  }
+]
