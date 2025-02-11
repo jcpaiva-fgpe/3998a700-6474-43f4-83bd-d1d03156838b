@@ -1,10 +1,24 @@
 {
     "title": "War and Peace",
-    "stats": { "pages": 1225 },
-    "price": 34.99
+    "stats": {
+        "pages": 1225,
+        "words": 587287,
+        "chapters": 365
+    }
 }
 {
     "title": "The Lord of the Rings",
-    "stats": { "pages": 1178 },
-    "price": 39.99
+    "stats": {
+        "pages": 1178,
+        "words": 481103,
+        "chapters": 62
+    }
+}
+{
+    "title": "The Name of the Rose",
+    "stats": {
+        "pages": 512,
+        "words": 175000,
+        "chapters": 28
+    }
 }
