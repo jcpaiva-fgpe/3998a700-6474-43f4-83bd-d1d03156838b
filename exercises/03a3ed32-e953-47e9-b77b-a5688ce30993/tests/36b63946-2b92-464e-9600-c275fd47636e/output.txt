@@ -1,10 +1,30 @@
 {
-    "title": "War and Peace",
-    "stats": { "pages": 1225 },
-    "price": 34.99
+    "title": "The Divine Comedy",
+    "published": { "year": 1320 },
+    "price": 29.99
+}
+{
+    "title": "Don Quijote",
+    "published": { "year": 1605 },
+    "price": 29.99
 }
 {
     "title": "The Lord of the Rings",
-    "stats": { "pages": 1178 },
+    "published": { "year": 1954 },
     "price": 39.99
+}
+{
+    "title": "One Hundred Years of Solitude",
+    "published": { "year": 1967 },
+    "price": 24.99
+}
+{
+    "title": "The Name of the Rose",
+    "published": { "year": 1980 },
+    "price": 27.99
+}
+{
+    "title": "The Trial",
+    "published": { "year": 1925 },
+    "price": 19.99
 }
