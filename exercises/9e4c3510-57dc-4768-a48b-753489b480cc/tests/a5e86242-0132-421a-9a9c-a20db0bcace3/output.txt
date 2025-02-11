@@ -1,28 +1,9 @@
-{
-    "title": "The Lord of the Rings",
-    "price": 39.99
-}
-{
-    "title": "War and Peace",
-    "price": 34.99
-}
-{
-    "title": "Don Quijote",
-    "price": 29.99
-}
-{
-    "title": "The Divine Comedy",
-    "price": 29.99
-}
-{
-    "title": "The Name of the Rose",
-    "price": 27.99
-}
-{
-    "title": "One Hundred Years of Solitude",
-    "price": 24.99
-}
-{
-    "title": "The Trial",
-    "price": 19.99
-}
+[
+  { "title": "The Lord of the Rings", "price": 39.99 },
+  { "title": "War and Peace", "price": 34.99 },
+  { "title": "Don Quijote", "price": 29.99 },
+  { "title": "The Divine Comedy", "price": 29.99 },
+  { "title": "The Name of the Rose", "price": 27.99 },
+  { "title": "One Hundred Years of Solitude", "price": 24.99 },
+  { "title": "The Trial", "price": 19.99 }
+]
