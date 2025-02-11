@@ -1,14 +1,13 @@
 db.advanced_books.find(
     {
-        $or: [
-            {"stats.pages": {$gt: 1000}},
-            {"price": {$gt: 30}}
+        $and: [
+            {"stats.pages": {$gt: 500}},
+            {"stats.chapters": {$gt: 20}}
         ]
     },
     {
         "_id": 0,
         "title": 1,
-        "stats.pages": 1,
-        "price": 1
+        "stats": 1
     }
 ).sort({"stats.pages": -1})
