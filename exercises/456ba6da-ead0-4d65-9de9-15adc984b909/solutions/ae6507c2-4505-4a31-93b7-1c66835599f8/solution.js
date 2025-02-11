@@ -1,14 +1,9 @@
 db.advanced_books.find(
-    {
-        $or: [
-            {"stats.pages": {$gt: 1000}},
-            {"price": {$gt: 30}}
-        ]
-    },
+    {"author.country": {$in: ["Italy", "Spain"]}},
     {
         "_id": 0,
         "title": 1,
-        "stats.pages": 1,
-        "price": 1
+        "author.country": 1,
+        "author.birth_year": 1
     }
-).sort({"stats.pages": -1})
+).sort({"author.birth_year": 1})
