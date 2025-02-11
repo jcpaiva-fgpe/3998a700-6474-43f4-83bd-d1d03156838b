@@ -1,24 +1,22 @@
-{
+[
+  {
     "title": "War and Peace",
-    "stats": {
-        "pages": 1225,
-        "words": 587287,
-        "chapters": 365
-    }
-}
-{
+    "stats": { "pages": 1225, "words": 587287, "chapters": 365 }
+  },
+  {
     "title": "The Lord of the Rings",
-    "stats": {
-        "pages": 1178,
-        "words": 481103,
-        "chapters": 62
-    }
-}
-{
+    "stats": { "pages": 1178, "words": 481103, "chapters": 62 }
+  },
+  {
+    "title": "Don Quijote",
+    "stats": { "pages": 863, "words": 195000, "chapters": 126 }
+  },
+  {
+    "title": "The Divine Comedy",
+    "stats": { "pages": 798, "words": 111000, "chapters": 100 }
+  },
+  {
     "title": "The Name of the Rose",
-    "stats": {
-        "pages": 512,
-        "words": 175000,
-        "chapters": 28
-    }
-}
+    "stats": { "pages": 512, "words": 175000, "chapters": 28 }
+  }
+]
