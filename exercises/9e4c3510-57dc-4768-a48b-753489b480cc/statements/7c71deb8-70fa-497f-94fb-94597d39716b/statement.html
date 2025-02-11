@@ -1,13 +1,4 @@
-<h2>Colecciones</h2>
-<p class="leafygreen-ui-1kp3ins">MongoDB almacena <em>documentos</em> en <em>Colecciones</em>.</p>
-<p>Las <em>Colecciones</em> son análogas a las <em>tablas</em> en el modelo relacional.</p>
-<div class="css-1yvtw5i ej97su30"><img alt="A collection of MongoDB documents." style="--border-color: #C1C7C6;" width="600" height="300" src="https://www.mongodb.com/docs/manual/images/crud-annotated-collection.bakedsvg.svg" class="leafygreen-ui-1qnf57e">
-</p>
-<h3>Crear una colección explícitamente</h3>
-<p>Aunque MongoDB puede crear una colección cuando se inserta el primer documento en la misma, también nos permite crear explícitamente una colección con el comando:</p>
-<pre><code>db.createCollection(name, options)</code></pre>
-<h3>Ejemplo</h3>
-</p>Para crear la colección prueba, podemos ejecutar la siguiente orden:</p>
-<pre><code>db.createCollection("prueba")</code></pre>
-<h3>Ejercicio</h3>
-<p>Crea una colección llamada <strong><code>empleados</code></strong></p>
+<p>Busca los libros que tengan definido el campo reviews y ordénalos por precio de forma descendente.</p>
+
+<p><em>Pista: Utiliza el operador <code>$exists</code> para verificar si un campo está presente.</p>
+<p><strong>Consulta:</strong> <a href="https://www.mongodb.com/docs/manual/reference/operator/query/exists/">$exists</a></em></p>
