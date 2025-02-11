@@ -1,21 +1,14 @@
-{
+[
+  {
     "title": "The Divine Comedy",
-    "author": {
-        "country": "Italy",
-        "birth_year": 1265
-    }
-}
-{
+    "author": { "country": "Italy", "birth_year": 1265 }
+  },
+  {
     "title": "Don Quijote",
-    "author": {
-        "country": "Spain",
-        "birth_year": 1547
-    }
-}
-{
+    "author": { "country": "Spain", "birth_year": 1547 }
+  },
+  {
     "title": "The Name of the Rose",
-    "author": {
-        "country": "Italy",
-        "birth_year": 1932
-    }
-}
+    "author": { "country": "Italy", "birth_year": 1932 }
+  }
+]
