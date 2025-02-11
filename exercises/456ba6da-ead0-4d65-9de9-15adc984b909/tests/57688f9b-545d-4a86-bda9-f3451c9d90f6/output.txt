@@ -1,10 +1,21 @@
 {
-    "title": "War and Peace",
-    "stats": { "pages": 1225 },
-    "price": 34.99
+    "title": "The Divine Comedy",
+    "author": {
+        "country": "Italy",
+        "birth_year": 1265
+    }
 }
 {
-    "title": "The Lord of the Rings",
-    "stats": { "pages": 1178 },
-    "price": 39.99
+    "title": "Don Quijote",
+    "author": {
+        "country": "Spain",
+        "birth_year": 1547
+    }
+}
+{
+    "title": "The Name of the Rose",
+    "author": {
+        "country": "Italy",
+        "birth_year": 1932
+    }
 }
